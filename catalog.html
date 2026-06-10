@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТехноМаркет — Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">Техно<span>Маркет</span></a>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html" class="active">Каталог</a>
+                <a href="gallery.html">Галерея</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <h1 class="section-title">Каталог товаров</h1>
+        <p style="color:#718096; margin-top:10px; margin-bottom:25px;">Нажмите на категорию чтобы отфильтровать, или смотрите все товары сразу</p>
+
+        <div class="category-bar">
+            <button class="category-btn active" onclick="filterProducts('все', this)">Все</button>
+            <button class="category-btn" onclick="filterProducts('холодильники', this)">Холодильники</button>
+            <button class="category-btn" onclick="filterProducts('стиральные', this)">Стиральные машины</button>
+            <button class="category-btn" onclick="filterProducts('телевизоры', this)">Телевизоры</button>
+            <button class="category-btn" onclick="filterProducts('пылесосы', this)">Пылесосы</button>
+            <button class="category-btn" onclick="filterProducts('кухонная', this)">Кухонная техника</button>
+            <button class="category-btn" onclick="filterProducts('климат', this)">Климатическая техника</button>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card" data-category="холодильники">
+                <img src="https://picsum.photos/seed/fridge1/400/300" alt="Холодильник Samsung">
+                <div class="product-card-body">
+                    <h3>Холодильник Samsung RT38K5400WW <span class="badge badge-sale">Акция</span></h3>
+                    <p>Двухкамерный холодильник с системой NoFrost. Объём 375 л.</p>
+                    <div class="product-price">38 000 ₽</div>
+                    <button class="btn btn-primary" style="width:100%" onclick="alert('Холодильник Samsung добавлен в корзину!')">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="стиральные">
+                <img src="https://picsum.photos/seed/washer2/400/300" alt="Стиральная машина LG">
+                <div class="product-card-body">
+                    <h3>Стиральная машина LG F2J5HS4W <span class="badge badge-sale">Акция</span></h3>
+                    <p>Фронтальная загрузка, 6 кг, 1200 об/мин. Класс А++.</p>
+                    <div class="product-price">26 500 ₽</div>
+                    <button class="btn btn-primary" style="width:100%" onclick="alert('Стиральная машина LG добавлена в корзину!')">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="телевизоры">
+                <img src="https://picsum.photos/seed/tv3/400/300" alt="Телевизор Sony">
+                <div class="product-card-body">
+                    <h3>Телевизор Sony KD-55X80J</h3>
+                    <p>Smart TV, 55 дюймов, 4K UHD, Wi-Fi, Android TV.</p>
+                    <div class="product-price">65 000 ₽</div>
+                    <button class="btn btn-primary" style="width:100%" onclick="alert('Телевизор Sony добавлен в корзину!')">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="пылесосы">
+                <img src="https://picsum.photos/seed/vacuum4/400/300" alt="Пылесос Dyson">
+                <div class="product-card-body">
+                    <h3>Пылесос Dyson V11 Absolute <span class="badge badge-sale">Акция</span></h3>
+                    <p>Беспроводной пылесос с LCD-экраном. Мощность всасывания 185 АВт.</p>
+                    <div class="product-price">48 000 ₽</div>
+                    <button class="btn btn-primary" style="width:100%" onclick="alert('Пылесос Dyson добавлен в корзину!')">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="кухонная">
+                <img src="https://picsum.photos/seed/microwave5/400/300" alt="Микроволновая печь">
+                <div class="product-card-body">
+                    <h3>Микроволновая печь Panasonic NN-ST342</h3>
+                    <p>Инверторная микроволновая печь 23 л, 800 Вт. 5 уровней мощности.</p>
+                    <div class="product-price">7 200 ₽</div>
+                    <button class="btn btn-primary" style="width:100%" onclick="alert('Микроволновая печь добавлена в корзину!')">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="климат">
+                <img src="https://picsum.photos/seed/ac6/400/300" alt="Кондиционер Mitsubishi">
+                <div class="product-card-body">
+                    <h3>Кондиционер Mitsubishi MSZ-LN25VGR <span class="badge badge-new">Новинка</span></h3>
+                    <p>Инверторный кондиционер 25 м², Wi-Fi управление, режим обогрева.</p>
+                    <div class="product-price">55 000 ₽</div>
+                    <button class="btn btn-primary" style="width:100%" onclick="alert('Кондиционер Mitsubishi добавлен в корзину!')">В корзину</button>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="section" style="margin-top:50px;">
+            <h2 class="section-title">Прайс-лист</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Категория</th><th>Бренды</th><th>Цена от</th><th>Цена до</th><th>Гарантия</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Холодильники</td><td>Samsung, LG, Bosch</td><td>18 000 ₽</td><td>120 000 ₽</td><td>24 мес.</td></tr>
+                        <tr><td>Стиральные машины</td><td>LG, Indesit, Candy</td><td>15 000 ₽</td><td>85 000 ₽</td><td>24 мес.</td></tr>
+                        <tr><td>Телевизоры</td><td>Sony, Samsung, LG</td><td>12 000 ₽</td><td>350 000 ₽</td><td>12 мес.</td></tr>
+                        <tr><td>Пылесосы</td><td>Dyson, Bosch, Philips</td><td>3 500 ₽</td><td>60 000 ₽</td><td>12 мес.</td></tr>
+                        <tr><td>Кухонная техника</td><td>Panasonic, Gorenje</td><td>2 000 ₽</td><td>45 000 ₽</td><td>12 мес.</td></tr>
+                        <tr><td>Кондиционеры</td><td>Mitsubishi, Daikin</td><td>28 000 ₽</td><td>180 000 ₽</td><td>36 мес.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function filterProducts(category, clickedBtn) {
+            var cards = document.querySelectorAll('.product-card');
+            cards.forEach(function(card) {
+                if (category === 'все' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            document.querySelectorAll('.category-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            clickedBtn.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

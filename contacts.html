@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТехноМаркет — Контакты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">Техно<span>Маркет</span></a>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="gallery.html">Галерея</a>
+                <a href="contacts.html" class="active">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <h1 class="section-title">Контакты</h1>
+        <p style="color:#718096; margin-top:10px; margin-bottom:35px;">Свяжитесь с нами любым удобным способом</p>
+
+        <section class="section">
+            <h2 style="font-size:1.3rem; margin-bottom:15px; color:#1a365d;">Наши контакты</h2>
+            <div class="info-cards">
+                <div class="info-card">
+                    <h4>Адрес</h4>
+                    <p>г. Москва, ул. Технологическая, д. 15<br>ТЦ «ТехноПлаза», 2 этаж</p>
+                </div>
+                <div class="info-card">
+                    <h4>Телефон</h4>
+                    <p>Бесплатно: +7 (800) 123-45-67<br>Директ: +7 (495) 987-65-43</p>
+                </div>
+                <div class="info-card">
+                    <h4>Email</h4>
+                    <p>Продажи: sales@technomarket.ru<br>Поддержка: support@technomarket.ru</p>
+                </div>
+                <div class="info-card">
+                    <h4>Режим работы</h4>
+                    <p>Пн–Пт: 9:00 – 21:00<br>Сб–Вс: 10:00 – 20:00</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 style="font-size:1.3rem; margin-bottom:20px; color:#1a365d;">Написать нам</h2>
+            <form class="contact-form" onsubmit="return handleSubmit(event)" novalidate>
+                <div class="form-group">
+                    <label for="name">Ваше имя *</label>
+                    <input type="text" id="name" name="name" placeholder="Введите ваше имя">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.ru">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (999) 000-00-00">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Тема обращения</label>
+                    <select id="subject" name="subject">
+                        <option value="">— Выберите тему —</option>
+                        <option value="purchase">Покупка товара</option>
+                        <option value="service">Сервисное обслуживание</option>
+                        <option value="delivery">Доставка и оплата</option>
+                        <option value="return">Возврат и обмен</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" placeholder="Опишите ваш вопрос подробнее..."></textarea>
+                </div>
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                    <button type="button" class="btn" style="background:#e2e8f0; color:#4a5568;"
+                        onclick="document.querySelector('form').reset()">Очистить</button>
+                </div>
+                <p style="margin-top:15px; font-size:0.85rem; color:#a0aec0;">
+                    * Поля, отмеченные звёздочкой, обязательны для заполнения
+                </p>
+            </form>
+        </section>
+
+        <section class="section">
+            <h2 style="font-size:1.3rem; margin-bottom:15px; color:#1a365d;">Мы на карте</h2>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.572085768!2d37.6175!3d55.7558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIwLjkiTiAzN8KwMzcnMDMuMCJF!5e0!3m2!1sru!2sru!4v1620000000000"
+                    title="Наше местоположение на карте" allowfullscreen loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            var name  = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            if (!name)  { alert('Пожалуйста, введите ваше имя!');  return false; }
+            if (!email) { alert('Пожалуйста, введите ваш email!'); return false; }
+            alert('Спасибо, ' + name + '!\nВаше сообщение отправлено.\nМы свяжемся с вами на ' + email);
+            event.target.reset();
+            return false;
+        }
+    </script>
+
+</body>
+</html>

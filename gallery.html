@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТехноМаркет — Галерея</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">Техно<span>Маркет</span></a>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="gallery.html" class="active">Галерея</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <h1 class="section-title">Галерея товаров</h1>
+        <p style="color:#718096; margin-top:10px; margin-bottom:25px;">Нажмите на любое изображение, чтобы увеличить его</p>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item" onclick="openModal('https://picsum.photos/seed/kitchen1/800/600', 'Современная кухня с встроенной техникой')">
+                <img src="https://picsum.photos/seed/kitchen1/400/300" alt="Современная кухня">
+                <div class="gallery-item-caption">
+                    <span class="gallery-category">Интерьер</span>
+                    Современная кухня с встроенной техникой
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('https://picsum.photos/seed/fridge1/800/600', 'Двухкамерный холодильник Samsung')">
+                <img src="https://picsum.photos/seed/fridge1/400/300" alt="Холодильник Samsung">
+                <div class="gallery-item-caption">
+                    <span class="gallery-category">Холодильники</span>
+                    Двухкамерный холодильник Samsung
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('https://picsum.photos/seed/washer2/800/600', 'Стиральная машина с фронтальной загрузкой')">
+                <img src="https://picsum.photos/seed/washer2/400/300" alt="Стиральная машина">
+                <div class="gallery-item-caption">
+                    <span class="gallery-category">Стиральные машины</span>
+                    Стиральная машина с фронтальной загрузкой
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('https://picsum.photos/seed/tv3/800/600', 'Телевизор 4K с OLED-экраном')">
+                <img src="https://picsum.photos/seed/tv3/400/300" alt="Телевизор Sony">
+                <div class="gallery-item-caption">
+                    <span class="gallery-category">Телевизоры</span>
+                    Телевизор 4K с OLED-экраном
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('https://picsum.photos/seed/vacuum4/800/600', 'Беспроводной пылесос Dyson')">
+                <img src="https://picsum.photos/seed/vacuum4/400/300" alt="Пылесос Dyson">
+                <div class="gallery-item-caption">
+                    <span class="gallery-category">Пылесосы</span>
+                    Беспроводной пылесос Dyson
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('https://picsum.photos/seed/microwave5/800/600', 'Микроволновая печь с инвертором')">
+                <img src="https://picsum.photos/seed/microwave5/400/300" alt="Микроволновая печь">
+                <div class="gallery-item-caption">
+                    <span class="gallery-category">Кухонная техника</span>
+                    Микроволновая печь с инвертором
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('https://picsum.photos/seed/ac6/800/600', 'Кондиционер с Wi-Fi управлением')">
+                <img src="https://picsum.photos/seed/ac6/400/300" alt="Кондиционер">
+                <div class="gallery-item-caption">
+                    <span class="gallery-category">Климатическая техника</span>
+                    Кондиционер с Wi-Fi управлением
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('https://picsum.photos/seed/coffee8/800/600', 'Современная кофемашина эспрессо')">
+                <img src="https://picsum.photos/seed/coffee8/400/300" alt="Кофемашина">
+                <div class="gallery-item-caption">
+                    <span class="gallery-category">Кухонная техника</span>
+                    Современная кофемашина эспрессо
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('https://picsum.photos/seed/dishwash9/800/600', 'Посудомоечная машина встраиваемая')">
+                <img src="https://picsum.photos/seed/dishwash9/400/300" alt="Посудомоечная машина">
+                <div class="gallery-item-caption">
+                    <span class="gallery-category">Кухонная техника</span>
+                    Посудомоечная машина встраиваемая
+                </div>
+            </div>
+
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Как мы делаем фотографии</h2>
+            <ol style="padding-left:20px; line-height:2.2; color:#4a5568; margin-top:15px;">
+                <li>Профессиональная фотостудия с белым фоном</li>
+                <li>Съёмка в реальных интерьерных условиях</li>
+                <li>Обработка цветов и яркости без ретуши товара</li>
+                <li>Публикация оригинальных фотографий без фильтров</li>
+                <li>Дополнительные ракурсы для каждого товара</li>
+            </ol>
+        </section>
+
+        <section class="section text-center">
+            <button class="btn btn-primary" onclick="alert('Спасибо! Мы добавим больше фотографий в ближайшее время.')">
+                Запросить больше фото
+            </button>
+        </section>
+
+    </main>
+
+    <div id="modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85);
+         align-items:center; justify-content:center; z-index:1000; padding:20px;">
+        <div style="max-width:800px; width:100%; text-align:center;">
+            <img id="modal-img" src="" alt="" style="width:100%; border-radius:12px; max-height:70vh; object-fit:cover;">
+            <p id="modal-caption" style="color:white; margin-top:15px; font-size:1.1rem;"></p>
+            <button class="btn btn-white" style="margin-top:15px;" onclick="closeModal()">Закрыть</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(imgSrc, caption) {
+            document.getElementById('modal-img').src = imgSrc;
+            document.getElementById('modal-caption').textContent = caption;
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
+
+</body>
+</html>
